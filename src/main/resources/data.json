@@ -1,0 +1,270 @@
+{
+  "formatVersion" : 1,
+  "databaseVersion" : 1,
+  "mods" : {
+    "prickle" : {
+      "path" : "lib"
+    },
+    "reforged" : {
+      "path" : "server/rpg"
+    },
+    "sliceanddice" : {
+      "path" : "server/tech/create"
+    },
+    "sodium" : {
+      "path" : "client/performance"
+    },
+    "storagedrawers" : {
+      "path" : "server/storage"
+    },
+    "t_and_t" : {
+      "path" : "server/worldgen"
+    },
+    "tectonic" : {
+      "path" : "server/worldgen"
+    },
+    "terrablender" : {
+      "path" : "lib"
+    },
+    "tia" : {
+      "path" : "client/visual"
+    },
+    "travelersbackpack" : {
+      "path" : "server/storage"
+    },
+    "unionlib" : {
+      "path" : "lib"
+    },
+    "uranus" : {
+      "path" : "lib"
+    },
+    "wakes" : {
+      "path" : "client/visual"
+    },
+    "xaeroworldmap" : {
+      "path" : "client/ui"
+    },
+    "yet_another_config_lib_v3" : {
+      "path" : "lib"
+    },
+    "youkaisfeasts" : {
+      "path" : "server/food"
+    },
+    "zume" : {
+      "path" : "client/ui"
+    },
+    "accessories" : {
+      "path" : "lib"
+    },
+    "advancedae" : {
+      "path" : "server/tech/ae2"
+    },
+    "advancedbackups" : {
+      "path" : "server/utility"
+    },
+    "ae2wtlib" : {
+      "path" : "server/tech/ae2"
+    },
+    "alexscaves" : {
+      "path" : "server/worldgen"
+    },
+    "ambientsounds" : {
+      "path" : "client/visual"
+    },
+    "appleskin" : {
+      "path" : "client/ui"
+    },
+    "ae2" : {
+      "path" : "server/tech/ae2"
+    },
+    "aquaculture" : {
+      "path" : "server/food"
+    },
+    "aquaculturedelight" : {
+      "path" : "server/food"
+    },
+    "aquamirae" : {
+      "path" : "server/rpg"
+    },
+    "architectury" : {
+      "path" : "lib"
+    },
+    "authme" : {
+      "path" : "client/utility"
+    },
+    "betterbees" : {
+      "path" : "server/misc"
+    },
+    "betterclouds" : {
+      "path" : "client/visual"
+    },
+    "betterf3" : {
+      "path" : "client/ui"
+    },
+    "biomesoplenty" : {
+      "path" : "server/worldgen"
+    },
+    "bookshelf" : {
+      "path" : "lib"
+    },
+    "celestech" : {
+      "path" : "server/tech/misc"
+    },
+    "chatanimation" : {
+      "path" : "client/visual"
+    },
+    "citadel" : {
+      "path" : "lib"
+    },
+    "clean_tooltips" : {
+      "path" : "client/ui"
+    },
+    "cloth_config" : {
+      "path" : "lib"
+    },
+    "concoction" : {
+      "path" : "server/food"
+    },
+    "copycats" : {
+      "path" : "server/tech/create"
+    },
+    "create_connected" : {
+      "path" : "server/tech/create"
+    },
+    "create" : {
+      "path" : "server/tech/create"
+    },
+    "createdeco" : {
+      "path" : "server/tech/create"
+    },
+    "create_dragons_plus" : {
+      "path" : "server/tech/create"
+    },
+    "create_enchantment_industry" : {
+      "path" : "server/tech/create"
+    },
+    "creativecore" : {
+      "path" : "lib"
+    },
+    "cristellib" : {
+      "path" : "lib"
+    },
+    "culturaldelights" : {
+      "path" : "server/food"
+    },
+    "distanthorizons" : {
+      "path" : "client/performance"
+    },
+    "dungeons_arise" : {
+      "path" : "server/worldgen"
+    },
+    "enchdesc" : {
+      "path" : "client/ui"
+    },
+    "entityculling" : {
+      "path" : "client/performance"
+    },
+    "expandeddelight" : {
+      "path" : "server/food"
+    },
+    "extendedae" : {
+      "path" : "server/tech/ae2"
+    },
+    "farmersdelight" : {
+      "path" : "server/food"
+    },
+    "fastquit" : {
+      "path" : "client/performance"
+    },
+    "ferritecore" : {
+      "path" : "performance"
+    },
+    "ffmodsubfolders" : {
+      "path" : "utility"
+    },
+    "forgeweave" : {
+      "path" : "lib"
+    },
+    "fragmentum" : {
+      "path" : "lib"
+    },
+    "geckolib" : {
+      "path" : "lib"
+    },
+    "glitchcore" : {
+      "path" : "lib"
+    },
+    "glodium" : {
+      "path" : "lib"
+    },
+    "gravestone" : {
+      "path" : "server/misc"
+    },
+    "guideme" : {
+      "path" : "lib"
+    },
+    "hearthandharvest" : {
+      "path" : "server/food"
+    },
+    "iceandfire" : {
+      "path" : "server/rpg"
+    },
+    "iris" : {
+      "path" : "client/visual"
+    },
+    "jei" : {
+      "path" : "ui"
+    },
+    "jupiter" : {
+      "path" : "lib"
+    },
+    "kotlinforforge" : {
+      "path" : "lib"
+    },
+    "lambdynamiclights" : {
+      "path" : "client/visual"
+    },
+    "legacyfreecam" : {
+      "path" : "client/utility"
+    },
+    "brewery" : {
+      "path" : "server/food"
+    },
+    "farm_and_charm" : {
+      "path" : "server/food"
+    },
+    "vinery" : {
+      "path" : "server/food"
+    },
+    "lithostitched" : {
+      "path" : "lib"
+    },
+    "lootr" : {
+      "path" : "server/worldgen"
+    },
+    "mealmastery" : {
+      "path" : "server/food"
+    },
+    "mezz_config" : {
+      "path" : "lib"
+    },
+    "mousetweaks" : {
+      "path" : "client/ui"
+    },
+    "nomads_delight" : {
+      "path" : "server/food"
+    },
+    "notenoughanimations" : {
+      "path" : "client/visual"
+    },
+    "octolib" : {
+      "path" : "lib"
+    },
+    "owo" : {
+      "path" : "lib"
+    },
+    "particlerain" : {
+      "path" : "client/visual"
+    }
+  }
+}
