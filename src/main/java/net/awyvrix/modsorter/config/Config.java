@@ -7,6 +7,7 @@ public class Config {
     public boolean deleteEmptyFolders = true;
     public boolean deleteClientMods = false;
     public boolean deleteServerMods = false;
+    public boolean deleteClientAndServerMods = false;
 
     public boolean defragmentation = false;
     public boolean rewriteOnConflict = false;

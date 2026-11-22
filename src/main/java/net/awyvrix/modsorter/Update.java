@@ -30,7 +30,7 @@ public class Update {
 
         try {
             HttpRequest request = HttpRequest.newBuilder(DATABASE_URI)
-                    .timeout(Duration.ofSeconds(CONFIG.timeout))
+                    .timeout(Duration.ofSeconds(CONFIG.timeout > 0 ? CONFIG.timeout : 15))
                     .GET()
                     .build();
 

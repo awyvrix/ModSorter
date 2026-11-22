@@ -83,6 +83,7 @@ public final class ModSorter {
             removeEmptyDirectories(modsDir);
             if (CONFIG.deleteServerMods) deleteDirectory(modsDir.resolve("server"));
             if (CONFIG.deleteClientMods) deleteDirectory(modsDir.resolve("client"));
+            if (CONFIG.deleteClientAndServerMods) deleteDirectory(modsDir.resolve("client-server"));
         } catch (IOException e) {
             LOGGER.warn("Failed to polish mods folder", e);
         }
