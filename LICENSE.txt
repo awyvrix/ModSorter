@@ -1,0 +1,133 @@
+# JAW OPEN CODE LICENSE
+
+Copyright (c) 2026 awyvrix
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use,
+reproduce, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, subject to the conditions below.
+
+## 1. PERMITTED USE
+
+The Software may be used for any purpose, including personal, educational,
+research, and commercial purposes.
+
+You are permitted to use the Software as a library or dependency, include it
+in other projects, modify its source code, create forks, and develop
+derivative works.
+
+No additional permission from the copyright holder is required for these
+activities, provided that the conditions of this license are followed.
+
+## 2. ATTRIBUTION
+
+The original author and copyright notices must be properly credited.
+
+When using, copying, modifying, or incorporating any substantial portion of
+the Software into another project, you must:
+
+- Preserve existing copyright and license notices in the copied source files.
+- Clearly acknowledge the original author, awyvrix.
+- Include a reference to the original project whenever reasonably possible.
+
+Attribution may be provided in the project's documentation, README, credits,
+or another reasonably accessible location.
+
+Modified versions must clearly indicate that changes have been made and must
+not misrepresent themselves as the original Software.
+
+## 3. AUTHOR NOTIFICATION
+
+If you use, incorporate, or distribute the Software, or any substantial
+portion of its source code, as part of another project, you must notify the
+original copyright holder.
+
+The notification must be sent through a contact method provided by the
+copyright holder, preferably before the first public release of the project
+and no later than 30 days after the first use.
+
+The notification should include:
+
+- The name of the project using the Software.
+- A brief description of how the Software is being used.
+- A link to the project, if it is publicly available.
+
+This notification is informational only. It does not require prior approval
+from the copyright holder and does not grant the copyright holder any right
+to prohibit otherwise permitted use of the Software.
+
+Private inspection, study, and evaluation of the Software do not require
+notification.
+
+## 4. REDISTRIBUTION
+
+Redistribution of the original or modified source code is permitted, provided
+that:
+
+- This license is included with the redistributed Software.
+- All original copyright and license notices are preserved.
+- Any modifications are clearly identified.
+- The attribution requirements in Section 2 are followed.
+
+Redistribution of compiled binaries is also permitted, including binaries
+incorporating the Software as a library or dependency.
+
+You may distribute the Software as part of commercial or proprietary
+projects. This license does not require the source code of such projects
+to be disclosed or released under the same license.
+
+## 5. DERIVATIVE WORKS
+
+You are permitted to create, maintain, publish, and distribute forks,
+modified versions, and derivative works based on the Software.
+
+Such works may be distributed under different licenses, provided that
+the original portions of the Software remain subject to this license
+and all applicable attribution and notification requirements are fulfilled.
+
+This license does not grant ownership of the original Software or its
+copyright to any recipient.
+
+## 6. SCOPE
+
+This license applies to the Software and its source code, including
+modifications and derivative works to the extent that they contain
+copyrightable material originating from the Software.
+
+This license does not grant exclusive rights over ideas, concepts,
+algorithms, methods, functionality, or independently developed
+implementations.
+
+Independent implementations that do not copy copyrightable portions
+of the Software are not subject to this license.
+
+## 7. TERMINATION
+
+The rights granted under this license terminate automatically if you
+fail to comply with its terms.
+
+Upon termination, you must cease any use, reproduction, modification,
+or distribution of the Software until the violation is corrected.
+
+If the violation is corrected, the permissions granted by this license
+are reinstated, subject to applicable law.
+
+Termination does not affect the rights of recipients who have received
+copies of the Software in compliance with this license.
+
+## 8. COPYRIGHT
+
+The copyright and license notices contained in the Software must not
+be removed or altered, except where necessary to identify modifications
+or preserve the notices of other contributors.
+
+This license does not transfer ownership or copyright of the Software.
+
+## 9. DISCLAIMER
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
