@@ -10,6 +10,9 @@
 <h3 align="center">Physics framework made for Minecraft</h3>
 <p align="center"><a href="https://github.com/awyvrix/ModSorter/issues"><img src="https://i.imgur.com/qPmjSXy.png" width="160" /></a> <a href="https://discord.gg/HkwSrBhKU3"><img src="https://i.imgur.com/uf6V9ZX.png" width="160" /></a> </p>
 
+<h1>Database Information</h1>
+To apply new modIds for sorting, create issue on mod GitHub page
+
 <h1>Installation Information</h1>
 To run mod you need to compile it using shadow jar or else mod won't find jackson library
 <pre>
