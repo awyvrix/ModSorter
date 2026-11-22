@@ -12,6 +12,6 @@ public class Config {
     public boolean rewriteOnConflict = false;
 
     public boolean autoUpdateDatabase = true;
-    public String database = "https://raw.githubusercontent.com/USER/REPO/BRANCH/database.json";
+    public String database = "https://raw.githubusercontent.com/awyvrix/ModSorter/main/src/main/resources/data.json";
     public int timeout = 15;
 }

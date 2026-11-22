@@ -7,6 +7,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
@@ -33,11 +34,11 @@ public class Update {
                     .GET()
                     .build();
 
-            HttpResponse<Path> response = HTTP.send(request, HttpResponse.BodyHandlers.ofFile(temp));
-
+            HttpResponse<String> response = HTTP.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
             if (response.statusCode() != 200) LOGGER.warn("Database update failed: HTTP {}", response.statusCode());
-            SorterRules remote = MAPPER.readValue(temp.toFile(), SorterRules.class);
+            SorterRules remote = MAPPER.readValue(response.body(), SorterRules.class);
 
+            if (remote.mods == null || remote.formatVersion < 1 || remote.databaseVersion < 1) LOGGER.warn("Downloaded database is invalid");
             if (remote.formatVersion != SUPPORTED_FORMAT_VERSION) LOGGER.warn("Unsupported database format: {}", remote.formatVersion);
             if (remote.databaseVersion <= mainConfig.databaseVersion) LOGGER.info("Database is already up to date");
             saveRules(temp, remote);
