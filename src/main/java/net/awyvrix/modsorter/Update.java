@@ -35,6 +35,7 @@ public class Update {
                     .build();
 
             HttpResponse<String> response = HTTP.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+
             if (response.statusCode() != 200) LOGGER.warn("Database update failed: HTTP {}", response.statusCode());
             SorterRules remote = MAPPER.readValue(response.body(), SorterRules.class);
 
