@@ -13,7 +13,6 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
 import static net.awyvrix.modsorter.config.ConfigManager.*;
 import static net.awyvrix.modsorter.sorter.ModSorterRules.CONFIG;
 
@@ -36,20 +35,20 @@ public class Update {
 
             HttpResponse<String> response = HTTP.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 
-            if (response.statusCode() != 200) LOGGER.warn("Database update failed: HTTP {}", response.statusCode());
+            if (response.statusCode() != 200) Main.LOGGER.warn("Database update failed: HTTP {}", response.statusCode());
             SorterRules remote = MAPPER.readValue(response.body(), SorterRules.class);
 
-            if (remote.mods == null || remote.formatVersion < 1 || remote.databaseVersion < 1) LOGGER.warn("Downloaded database is invalid");
-            if (remote.formatVersion != SUPPORTED_FORMAT_VERSION) LOGGER.warn("Unsupported database format: {}", remote.formatVersion);
-            if (remote.databaseVersion <= mainConfig.databaseVersion) LOGGER.info("Database is already up to date");
+            if (remote.mods == null || remote.formatVersion < 1 || remote.databaseVersion < 1) Main.LOGGER.warn("Downloaded database is invalid");
+            if (remote.formatVersion != SUPPORTED_FORMAT_VERSION) Main.LOGGER.warn("Unsupported database format: {}", remote.formatVersion);
+            if (remote.databaseVersion <= mainConfig.databaseVersion) Main.LOGGER.info("Database is already up to date");
             saveRules(temp, remote);
             Files.move(temp, MAIN_FILE, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
 
             mainConfig = remote;
-            LOGGER.info("Database updated to version {}", remote.databaseVersion);
+            Main.LOGGER.info("Database updated to version {}", remote.databaseVersion);
 
         } catch (Exception e) {
-            LOGGER.error("Failed to update database", e);
+            Main.LOGGER.error("Failed to update database", e);
 
         } finally {
             try {

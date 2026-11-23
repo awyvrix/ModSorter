@@ -2,13 +2,12 @@ package net.awyvrix.modsorter.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import net.awyvrix.modsorter.Main;
 import net.awyvrix.modsorter.Update;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static com.mojang.text2speech.Narrator.LOGGER;
 
 public class ConfigManager {
     public static final Path MAIN_FILE = Path.of("config/modsorter/main.json");
@@ -23,10 +22,10 @@ public class ConfigManager {
     public static SorterRules loadMain() throws IOException {
         if (Files.exists(MAIN_FILE)) {
             mainConfig = MAPPER.readValue(MAIN_FILE.toFile(), SorterRules.class);
-            LOGGER.info("SorterConfig loaded with: {} entries", mainConfig.mods.size());
+            Main.LOGGER.info("SorterConfig loaded with: {} entries", mainConfig.mods.size());
 
         } else {
-            LOGGER.info("SorterConfig not found - Creating new");
+            Main.LOGGER.info("SorterConfig not found - Creating new");
             mainConfig = new SorterRules();
             saveRules(MAIN_FILE, mainConfig);
 
@@ -40,10 +39,10 @@ public class ConfigManager {
     public static SorterRules loadOverride() throws IOException {
         if (Files.exists(OVERRIDE_FILE)) {
             overrideConfig = MAPPER.readValue(OVERRIDE_FILE.toFile(), SorterRules.class);
-            LOGGER.info("Override SorterConfig loaded");
+            Main.LOGGER.info("Override SorterConfig loaded");
 
         } else {
-            LOGGER.info("Override SorterConfig not found - Creating new");
+            Main.LOGGER.info("Override SorterConfig not found - Creating new");
             overrideConfig = new SorterRules();
             saveRules(OVERRIDE_FILE, overrideConfig);
         }
@@ -53,10 +52,10 @@ public class ConfigManager {
     public static Config loadConfig() throws IOException {
         if (Files.exists(CONFIG_FILE)) {
             commonConfig = MAPPER.readValue(CONFIG_FILE.toFile(), Config.class);
-            LOGGER.info("Common Config loaded");
+            Main.LOGGER.info("Common Config loaded");
 
         } else {
-            LOGGER.info("Common Config not found - Creating new");
+            Main.LOGGER.info("Common Config not found - Creating new");
             commonConfig = new Config();
         }
         Files.createDirectories(CONFIG_FILE.getParent());

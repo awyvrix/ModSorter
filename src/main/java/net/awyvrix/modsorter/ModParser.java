@@ -1,5 +1,7 @@
 package net.awyvrix.modsorter;
 
+import net.neoforged.fml.loading.FMLPaths;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,8 +9,10 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.Enumeration;
 import java.util.Locale;
+import java.util.UUID;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
@@ -49,7 +53,7 @@ public final class ModParser {
                 if (modId != null) return modId;
 
             } catch (IOException e) {
-                LOGGER.debug("Failed to inspect nested JAR: {}", name, e);
+                Main.LOGGER.debug("Failed to inspect nested JAR: {}", name, e);
             }
         }
 
@@ -94,13 +98,13 @@ public final class ModParser {
 
         try (JarFile file = new JarFile(jar.toFile())) {
             if (hasEarlyServices(file)) {
-                LOGGER.info("Skipping early service jar: {}", jar.getFileName());
+                Main.LOGGER.info("Skipping early service jar: {}", jar.getFileName());
                 return null;
             }
 
             modId = readModId(file);
             if (RULES.get(modId) == null) {
-                LOGGER.warn("ModId is not in sortList or not found: {}", jar.getFileName());
+                Main.LOGGER.warn("ModId is not in sortList or not found: {}", jar.getFileName());
                 return null;
             }
             Path category = Path.of(RULES.get(modId).path());
@@ -136,12 +140,37 @@ public final class ModParser {
                             String installedId = readModId(file);
                             return modId.equals(installedId);
                         } catch (Exception e) {
-                            LOGGER.debug("Failed to inspect installed jar: {}", path, e);
+                            Main.LOGGER.debug("Failed to inspect installed jar: {}", path, e);
                             return false;
                         }
                     })
                     .findFirst()
                     .orElse(null);
+        }
+    }
+
+    public static boolean replaceMods(Path source, Path destination, Path installed) throws IOException {
+        Path backupDir = FMLPaths.CONFIGDIR.get().resolve("modsorter/backup");
+        Files.createDirectories(backupDir);
+        Path backup = null;
+
+        try {
+            Path bkp = backupDir.resolve(UUID.randomUUID() + "-" + installed.getFileName());
+            Files.move(installed, bkp);
+            backup = bkp;
+
+            Files.createDirectories(destination.getParent());
+            Files.move(source, destination);
+
+            Files.deleteIfExists(backup);
+            LOGGER.info("Replaced {} -> {}", installed.getFileName(), destination.getFileName());
+            return true;
+        } catch (IOException e) {
+            if (backup != null && Files.exists(backup)) {
+                Files.createDirectories(installed.getParent());
+                Files.move(backup, installed, StandardCopyOption.REPLACE_EXISTING);
+            }
+            throw e;
         }
     }
 }

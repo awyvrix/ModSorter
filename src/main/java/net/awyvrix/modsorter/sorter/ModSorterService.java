@@ -3,6 +3,7 @@ package net.awyvrix.modsorter.sorter;
 import cpw.mods.modlauncher.api.IEnvironment;
 import cpw.mods.modlauncher.api.ITransformationService;
 import cpw.mods.modlauncher.api.ITransformer;
+import net.awyvrix.modsorter.Main;
 import net.awyvrix.modsorter.ModSorter;
 import net.awyvrix.modsorter.config.ConfigManager;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +13,6 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Set;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
 import static net.awyvrix.modsorter.ModSorter.defragment;
 import static net.awyvrix.modsorter.config.ConfigManager.*;
 import static net.awyvrix.modsorter.sorter.ModSorterRules.CONFIG;
@@ -35,34 +35,34 @@ public final class ModSorterService implements ITransformationService {
             RULES.putAll(ConfigManager.loadMain().mods);
             if (CONFIG.useOverrides) RULES.putAll(ConfigManager.loadOverride().mods);
         } catch (IOException e) {
-            LOGGER.warn("Failed to load config");
+            Main.LOGGER.warn("Failed to load config");
             throw new RuntimeException(e);
         }
 
         if (CONFIG.defragmentation) {
             try {
-                LOGGER.info("Initialising Defragmentation process. Rewrite: {}", CONFIG.rewriteOnConflict);
+                Main.LOGGER.info("Initialising Defragmentation process. Rewrite: {}", CONFIG.rewriteOnConflict);
 
                 defragment(CONFIG.rewriteOnConflict);
                 CONFIG.defragmentation = false;
                 Files.createDirectories(CONFIG_FILE.getParent());
                 MAPPER.writeValue(CONFIG_FILE.toFile(), commonConfig);
 
-                LOGGER.info("Defragmentation successfully finished");
+                Main.LOGGER.info("Defragmentation successfully finished");
             } catch (IOException e) {
-                LOGGER.error("Failed to complete defragmentation process");
+                Main.LOGGER.error("Failed to complete defragmentation process");
                 throw new RuntimeException(e);
             }
         } else {
-            LOGGER.info("Initialising ModSorter");
+            Main.LOGGER.info("Initialising ModSorter");
             try {
                 if (commonConfig.resort) defragment(CONFIG.rewriteOnConflict);
                 ModSorter.sort();
             } catch (IOException e) {
-                LOGGER.error("Failed to complete sorting process");
+                Main.LOGGER.error("Failed to complete sorting process");
                 throw new RuntimeException(e);
             }
-            LOGGER.info("ModSorter initialized");
+            Main.LOGGER.info("ModSorter initialized");
         }
         if (commonConfig.exitOnComplete) System.exit(1);
     }

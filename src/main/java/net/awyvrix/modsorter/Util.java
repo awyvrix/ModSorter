@@ -8,8 +8,6 @@ import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
-
 public class Util {
     public static void removeEmptyDirectories(Path root) throws IOException {
         root = root.toAbsolutePath().normalize();
@@ -23,7 +21,7 @@ public class Util {
                 try (DirectoryStream<Path> contents = Files.newDirectoryStream(dir)) {
                     if (!contents.iterator().hasNext()) {
                         Files.delete(dir);
-                        LOGGER.debug("Removed empty directory: {}", root.relativize(dir));
+                        Main.LOGGER.debug("Removed empty directory: {}", root.relativize(dir));
                     }
                 }
             }
