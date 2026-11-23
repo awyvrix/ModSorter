@@ -1,270 +1,392 @@
 {
-  "formatVersion" : 1,
-  "databaseVersion" : 1,
-  "mods" : {
-    "prickle" : {
-      "path" : "lib"
-    },
-    "reforged" : {
-      "path" : "server/rpg"
-    },
-    "sliceanddice" : {
-      "path" : "server/tech/create"
-    },
-    "sodium" : {
-      "path" : "client/performance"
-    },
-    "storagedrawers" : {
-      "path" : "server/storage"
-    },
-    "t_and_t" : {
-      "path" : "server/worldgen"
-    },
-    "tectonic" : {
-      "path" : "server/worldgen"
-    },
-    "terrablender" : {
-      "path" : "lib"
-    },
-    "tia" : {
-      "path" : "client/visual"
-    },
-    "travelersbackpack" : {
-      "path" : "server/storage"
-    },
-    "unionlib" : {
-      "path" : "lib"
-    },
-    "uranus" : {
-      "path" : "lib"
-    },
-    "wakes" : {
-      "path" : "client/visual"
-    },
-    "xaeroworldmap" : {
-      "path" : "client/ui"
-    },
-    "yet_another_config_lib_v3" : {
-      "path" : "lib"
-    },
-    "youkaisfeasts" : {
-      "path" : "server/food"
-    },
-    "zume" : {
-      "path" : "client/ui"
-    },
-    "accessories" : {
-      "path" : "lib"
-    },
-    "advancedae" : {
-      "path" : "server/tech/ae2"
-    },
-    "advancedbackups" : {
-      "path" : "server/utility"
-    },
-    "ae2wtlib" : {
-      "path" : "server/tech/ae2"
-    },
-    "alexscaves" : {
-      "path" : "server/worldgen"
-    },
-    "ambientsounds" : {
-      "path" : "client/visual"
-    },
-    "appleskin" : {
-      "path" : "client/ui"
-    },
-    "ae2" : {
-      "path" : "server/tech/ae2"
-    },
-    "aquaculture" : {
-      "path" : "server/food"
-    },
-    "aquaculturedelight" : {
-      "path" : "server/food"
-    },
-    "aquamirae" : {
-      "path" : "server/rpg"
-    },
-    "architectury" : {
-      "path" : "lib"
-    },
-    "authme" : {
-      "path" : "client/utility"
-    },
-    "betterbees" : {
-      "path" : "server/misc"
-    },
-    "betterclouds" : {
-      "path" : "client/visual"
-    },
-    "betterf3" : {
-      "path" : "client/ui"
-    },
-    "biomesoplenty" : {
-      "path" : "server/worldgen"
-    },
-    "bookshelf" : {
-      "path" : "lib"
-    },
-    "celestech" : {
-      "path" : "server/tech/misc"
-    },
-    "chatanimation" : {
-      "path" : "client/visual"
-    },
-    "citadel" : {
-      "path" : "lib"
-    },
-    "clean_tooltips" : {
-      "path" : "client/ui"
-    },
-    "cloth_config" : {
-      "path" : "lib"
-    },
-    "concoction" : {
-      "path" : "server/food"
-    },
-    "copycats" : {
-      "path" : "server/tech/create"
-    },
-    "create_connected" : {
-      "path" : "server/tech/create"
-    },
-    "create" : {
-      "path" : "server/tech/create"
-    },
-    "createdeco" : {
-      "path" : "server/tech/create"
-    },
-    "create_dragons_plus" : {
-      "path" : "server/tech/create"
-    },
-    "create_enchantment_industry" : {
-      "path" : "server/tech/create"
-    },
-    "creativecore" : {
-      "path" : "lib"
-    },
-    "cristellib" : {
-      "path" : "lib"
-    },
-    "culturaldelights" : {
-      "path" : "server/food"
-    },
-    "distanthorizons" : {
-      "path" : "client/performance"
-    },
-    "dungeons_arise" : {
-      "path" : "server/worldgen"
-    },
-    "enchdesc" : {
-      "path" : "client/ui"
-    },
-    "entityculling" : {
-      "path" : "client/performance"
-    },
-    "expandeddelight" : {
-      "path" : "server/food"
-    },
-    "extendedae" : {
-      "path" : "server/tech/ae2"
-    },
-    "farmersdelight" : {
-      "path" : "server/food"
-    },
-    "fastquit" : {
-      "path" : "client/performance"
-    },
-    "ferritecore" : {
-      "path" : "performance"
-    },
-    "ffmodsubfolders" : {
-      "path" : "utility"
-    },
-    "forgeweave" : {
-      "path" : "lib"
-    },
-    "fragmentum" : {
-      "path" : "lib"
-    },
-    "geckolib" : {
-      "path" : "lib"
-    },
-    "glitchcore" : {
-      "path" : "lib"
-    },
-    "glodium" : {
-      "path" : "lib"
-    },
-    "gravestone" : {
-      "path" : "server/misc"
-    },
-    "guideme" : {
-      "path" : "lib"
-    },
-    "hearthandharvest" : {
-      "path" : "server/food"
-    },
-    "iceandfire" : {
-      "path" : "server/rpg"
-    },
-    "iris" : {
-      "path" : "client/visual"
-    },
-    "jei" : {
-      "path" : "ui"
-    },
-    "jupiter" : {
-      "path" : "lib"
-    },
-    "kotlinforforge" : {
-      "path" : "lib"
-    },
-    "lambdynamiclights" : {
-      "path" : "client/visual"
-    },
-    "legacyfreecam" : {
-      "path" : "client/utility"
-    },
-    "brewery" : {
-      "path" : "server/food"
-    },
-    "farm_and_charm" : {
-      "path" : "server/food"
-    },
-    "vinery" : {
-      "path" : "server/food"
-    },
-    "lithostitched" : {
-      "path" : "lib"
-    },
-    "lootr" : {
-      "path" : "server/worldgen"
-    },
-    "mealmastery" : {
-      "path" : "server/food"
-    },
-    "mezz_config" : {
-      "path" : "lib"
-    },
-    "mousetweaks" : {
-      "path" : "client/ui"
-    },
-    "nomads_delight" : {
-      "path" : "server/food"
-    },
-    "notenoughanimations" : {
-      "path" : "client/visual"
-    },
-    "octolib" : {
-      "path" : "lib"
-    },
-    "owo" : {
-      "path" : "lib"
-    },
-    "particlerain" : {
-      "path" : "client/visual"
-    }
+  "formatVersion": 1,
+  "databaseVersion": 2,
+  "mods": {
+    "prickle": {"path": "client-server/lib"},
+    "reforged": {"path": "client-server/rpg"},
+    "sliceanddice": {"path": "client-server/tech/create"},
+    "sodium": {"path": "client/performance"},
+    "storagedrawers": {"path": "client-server/storage"},
+    "t_and_t": {"path": "client-server/worldgen"},
+    "tectonic": {"path": "client-server/worldgen"},
+    "terrablender": {"path": "client-server/lib"},
+    "tia": {"path": "client/visual"},
+    "travelersbackpack": {"path": "client-server/storage"},
+    "unionlib": {"path": "client-server/lib"},
+    "uranus": {"path": "client-server/lib"},
+    "wakes": {"path": "client/visual"},
+    "xaeroworldmap": {"path": "client/ui"},
+    "yet_another_config_lib_v3": {"path": "client-server/lib"},
+    "youkaisfeasts": {"path": "client-server/food"},
+    "zume": {"path": "client/ui"},
+    "accessories": {"path": "client-server/lib"},
+    "advancedae": {"path": "client-server/tech/ae2"},
+    "advancedbackups": {"path": "server/utility"},
+    "ae2wtlib": {"path": "client-server/tech/ae2"},
+    "alexscaves": {"path": "client-server/worldgen"},
+    "ambientsounds": {"path": "client/visual"},
+    "appleskin": {"path": "client/ui"},
+    "ae2": {"path": "client-server/tech/ae2"},
+    "aquaculture": {"path": "client-server/food"},
+    "aquaculturedelight": {"path": "client-server/food"},
+    "aquamirae": {"path": "client-server/rpg"},
+    "architectury": {"path": "client-server/lib"},
+    "authme": {"path": "client/utility"},
+    "betterbees": {"path": "client-server/misc"},
+    "betterclouds": {"path": "client/visual"},
+    "betterf3": {"path": "client/ui"},
+    "biomesoplenty": {"path": "client-server/worldgen"},
+    "bookshelf": {"path": "client-server/lib"},
+    "celestech": {"path": "client-server/tech/misc"},
+    "chatanimation": {"path": "client/visual"},
+    "citadel": {"path": "client-server/lib"},
+    "clean_tooltips": {"path": "client/ui"},
+    "cloth_config": {"path": "client-server/lib"},
+    "concoction": {"path": "client-server/food"},
+    "copycats": {"path": "client-server/tech/create"},
+    "create_connected": {"path": "client-server/tech/create"},
+    "create": {"path": "client-server/tech/create"},
+    "createdeco": {"path": "client-server/tech/create"},
+    "create_dragons_plus": {"path": "client-server/tech/create"},
+    "create_enchantment_industry": {"path": "client-server/tech/create"},
+    "creativecore": {"path": "client-server/lib"},
+    "cristellib": {"path": "client-server/lib"},
+    "culturaldelights": {"path": "client-server/food"},
+    "distanthorizons": {"path": "client/visual"},
+    "dungeons_arise": {"path": "client-server/worldgen"},
+    "enchdesc": {"path": "client/ui"},
+    "entityculling": {"path": "client/performance"},
+    "expandeddelight": {"path": "client-server/food"},
+    "extendedae": {"path": "client-server/tech/ae2"},
+    "farmersdelight": {"path": "client-server/food"},
+    "fastquit": {"path": "client/performance"},
+    "ferritecore": {"path": "client-server/performance"},
+    "ffmodsubfolders": {"path": "client-server/utility"},
+    "forgeweave": {"path": "client-server/lib"},
+    "fragmentum": {"path": "client-server/lib"},
+    "geckolib": {"path": "client-server/lib"},
+    "glitchcore": {"path": "client-server/lib"},
+    "glodium": {"path": "client-server/lib"},
+    "gravestone": {"path": "client-server/misc"},
+    "guideme": {"path": "client-server/lib"},
+    "hearthandharvest": {"path": "client-server/food"},
+    "iceandfire": {"path": "client-server/rpg"},
+    "iris": {"path": "client/visual"},
+    "jei": {"path": "client/ui"},
+    "jupiter": {"path": "client-server/lib"},
+    "kotlinforforge": {"path": "client-server/lib"},
+    "lambdynamiclights": {"path": "client/visual"},
+    "legacyfreecam": {"path": "client/utility"},
+    "brewery": {"path": "client-server/food"},
+    "farm_and_charm": {"path": "client-server/food"},
+    "vinery": {"path": "client-server/food"},
+    "lithostitched": {"path": "client-server/lib"},
+    "lootr": {"path": "client-server/worldgen"},
+    "mealmastery": {"path": "client-server/food"},
+    "mezz_config": {"path": "client-server/lib"},
+    "mousetweaks": {"path": "client/ui"},
+    "nomads_delight": {"path": "client-server/food"},
+    "notenoughanimations": {"path": "client/visual"},
+    "octolib": {"path": "client-server/lib"},
+    "owo": {"path": "client-server/lib"},
+    "particlerain": {"path": "client/visual"},
+
+    "alexsmobs": {"path": "client-server/mobs"},
+    "alexsmobsneo": {"path": "client-server/mobs"},
+    "alexscaves": {"path": "client-server/worldgen"},
+    "ars_nouveau": {"path": "client-server/magic"},
+    "ars_elemental": {"path": "client-server/magic"},
+    "artifacts": {"path": "client-server/rpg"},
+    "attributefix": {"path": "client-server/lib"},
+    "balm": {"path": "client-server/lib"},
+    "betteradvancements": {"path": "client/ui"},
+    "bettercombat": {"path": "client-server/rpg"},
+    "betterdeserttemples": {"path": "client-server/worldgen"},
+    "betterdungeons": {"path": "client-server/worldgen"},
+    "betterendisland": {"path": "client-server/worldgen"},
+    "betterfortresses": {"path": "client-server/worldgen"},
+    "betterjungletemples": {"path": "client-server/worldgen"},
+    "bettermineshafts": {"path": "client-server/worldgen"},
+    "betteroceanmonuments": {"path": "client-server/worldgen"},
+    "betterstrongholds": {"path": "client-server/worldgen"},
+    "betterwitchhuts": {"path": "client-server/worldgen"},
+    "blueprint": {"path": "client-server/lib"},
+    "caelus": {"path": "client-server/lib"},
+    "carryon": {"path": "client-server/utility"},
+    "charmofundying": {"path": "client-server/rpg"},
+    "chunkloaders": {"path": "client-server/utility"},
+    "citadel": {"path": "client-server/lib"},
+    "clumps": {"path": "client-server/performance"},
+    "collective": {"path": "client-server/lib"},
+    "comforts": {"path": "client-server/misc"},
+    "configured": {"path": "client/ui"},
+    "connectivity": {"path": "client-server/performance"},
+    "corpse": {"path": "client-server/misc"},
+    "curios": {"path": "client-server/lib"},
+    "curiouslanterns": {"path": "client-server/misc"},
+    "darkmodeeverywhere": {"path": "client/ui"},
+    "domum_ornamentum": {"path": "client-server/decoration"},
+    "dummmmmmy": {"path": "client-server/utility"},
+    "easyanvils": {"path": "client-server/utility"},
+    "easymagic": {"path": "client-server/utility"},
+    "embeddium": {"path": "client/visual"},
+    "embeddium_extra": {"path": "client/visual"},
+    "emi": {"path": "client/ui"},
+    "emi_loot": {"path": "client/ui"},
+    "emi_enchanting": {"path": "client/ui"},
+    "emitrades": {"path": "client/ui"},
+    "endrem": {"path": "client-server/rpg"},
+    "enhancedcelestials": {"path": "client-server/worldgen"},
+    "everycomp": {"path": "client-server/decoration"},
+    "exposure": {"path": "client-server/misc"},
+    "fancymenu": {"path": "client/ui"},
+    "farmersrespite": {"path": "client-server/food"},
+    "fastasyncworldsave": {"path": "server/performance"},
+    "fastbench": {"path": "client-server/performance"},
+    "fastfurnace": {"path": "client-server/performance"},
+    "fastsuite": {"path": "client-server/performance"},
+    "farsight": {"path": "client/visual"},
+    "fishingreal": {"path": "client-server/food"},
+    "framework": {"path": "client-server/lib"},
+    "ftbchunks": {"path": "client-server/utility"},
+    "ftblibrary": {"path": "client-server/lib"},
+    "ftbteams": {"path": "client-server/utility"},
+    "ftbquests": {"path": "client-server/utility"},
+    "fusion": {"path": "client-server/lib"},
+    "gravestone": {"path": "client-server/misc"},
+    "handcrafted": {"path": "client-server/decoration"},
+    "iceberg": {"path": "client-server/lib"},
+    "immediatelyfast": {"path": "client/performance"},
+    "integrated_api": {"path": "client-server/lib"},
+    "integrated_dungeons": {"path": "client-server/worldgen"},
+    "inventoryprofilesnext": {"path": "client/utility"},
+    "jade": {"path": "client/ui"},
+    "jadeaddons": {"path": "client/ui"},
+    "jecharacters": {"path": "client/ui"},
+    "journeymap": {"path": "client/ui"},
+    "konkrete": {"path": "client-server/lib"},
+    "kubejs": {"path": "client-server/utility"},
+    "kubejs_create": {"path": "client-server/tech/create"},
+    "kubejs_immersive_engineering": {"path": "client-server/tech"},
+    "letmedespawn": {"path": "client-server/performance"},
+    "libx": {"path": "client-server/lib"},
+    "lithium": {"path": "client-server/performance"},
+    "lootr": {"path": "client-server/worldgen"},
+    "modernfix": {"path": "client-server/performance"},
+    "moonlight": {"path": "client-server/lib"},
+    "moonrise": {"path": "client-server/performance"},
+    "moremobvariants": {"path": "client-server/mobs"},
+    "moreoverlays": {"path": "client/ui"},
+    "mousetweaks": {"path": "client/ui"},
+    "mowziesmobs": {"path": "client-server/mobs"},
+    "naturescompass": {"path": "client-server/utility"},
+    "neat": {"path": "client/ui"},
+    "notenoughcrashes": {"path": "client/utility"},
+    "obscure_api": {"path": "client-server/lib"},
+    "openpartiesandclaims": {"path": "client-server/utility"},
+    "oreexcavation": {"path": "client-server/utility"},
+    "owo": {"path": "client-server/lib"},
+    "packetfixer": {"path": "client-server/performance"},
+    "patchouli": {"path": "client-server/lib"},
+    "placebo": {"path": "client-server/lib"},
+    "polymorph": {"path": "client-server/utility"},
+    "puzzleslib": {"path": "client-server/lib"},
+    "quark": {"path": "client-server/misc"},
+    "rechiseled": {"path": "client-server/decoration"},
+    "rechiseledcreate": {"path": "client-server/tech/create"},
+    "resourcefulconfig": {"path": "client-server/lib"},
+    "resourcefullib": {"path": "client-server/lib"},
+    "rhino": {"path": "client-server/lib"},
+    "rubidium": {"path": "client/visual"},
+    "searchables": {"path": "client-server/lib"},
+    "sereneseasons": {"path": "client-server/worldgen"},
+    "simplemagnets": {"path": "client-server/utility"},
+    "sophisticatedbackpacks": {"path": "client-server/storage"},
+    "sophisticatedcore": {"path": "client-server/lib"},
+    "sophisticatedstorage": {"path": "client-server/storage"},
+    "spark": {"path": "server/utility"},
+    "spectrum": {"path": "client-server/magic"},
+    "structure_gel": {"path": "client-server/lib"},
+    "supplementaries": {"path": "client-server/decoration"},
+    "terrablender": {"path": "client-server/lib"},
+    "the_bumblezone": {"path": "client-server/worldgen"},
+    "the_twilight_forest": {"path": "client-server/rpg"},
+    "toms_storage": {"path": "client-server/storage"},
+    "toolbelt": {"path": "client-server/utility"},
+    "trashcans": {"path": "client-server/storage"},
+    "twilightforest": {"path": "client-server/rpg"},
+    "waystones": {"path": "client-server/utility"},
+    "xaerominimap": {"path": "client/ui"},
+    "yungsapi": {"path": "client-server/lib"},
+    "yungsbetterdeserttemples": {"path": "client-server/worldgen"},
+    "yungsbetterdungeons": {"path": "client-server/worldgen"},
+    "yungsbetterendisland": {"path": "client-server/worldgen"},
+    "yungsbetterjungletemples": {"path": "client-server/worldgen"},
+    "yungsbettermineshafts": {"path": "client-server/worldgen"},
+    "yungsbetteroceanmonuments": {"path": "client-server/worldgen"},
+    "yungsbetterstrongholds": {"path": "client-server/worldgen"},
+    "yungsbetterwitchhuts": {"path": "client-server/worldgen"},
+
+    "mekanism": {"path": "client-server/tech/mekanism"},
+    "mekanismadditions": {"path": "client-server/tech/mekanism"},
+    "mekanismgenerators": {"path": "client-server/tech/mekanism"},
+    "mekanismtools": {"path": "client-server/tech/mekanism"},
+    "immersiveengineering": {"path": "client-server/tech/immersiveengineering"},
+    "immersivepetroleum": {"path": "client-server/tech/immersiveengineering"},
+    "immersivemachinery": {"path": "client-server/tech/immersiveengineering"},
+    "powah": {"path": "client-server/tech/powah"},
+    "rftoolsbase": {"path": "client-server/tech/rftools"},
+    "rftoolsbuilder": {"path": "client-server/tech/rftools"},
+    "rftoolsutility": {"path": "client-server/tech/rftools"},
+    "refinedstorage": {"path": "client-server/tech/storage"},
+    "refinedstorageaddons": {"path": "client-server/tech/storage"},
+    "industrialforegoing": {"path": "client-server/tech/industrialforegoing"},
+    "mob_grinding_utils": {"path": "client-server/tech"},
+    "fluxnetworks": {"path": "client-server/tech"},
+    "pipez": {"path": "client-server/tech"},
+    "prettypipes": {"path": "client-server/tech"},
+    "laserio": {"path": "client-server/tech"},
+    "functionalstorage": {"path": "client-server/storage"},
+    "ironchest": {"path": "client-server/storage"},
+    "sophisticatedstorage": {"path": "client-server/storage"},
+    "enderstorage": {"path": "client-server/storage"},
+    "enderchests": {"path": "client-server/storage"},
+    "storagedrawers": {"path": "client-server/storage"},
+    "compactmachines": {"path": "client-server/tech"},
+    "buildinggadgets2": {"path": "client-server/utility"},
+    "constructionwand": {"path": "client-server/utility"},
+    "createaddition": {"path": "client-server/tech/create"},
+    "create_central_kitchen": {"path": "client-server/tech/create"},
+    "create_power_loader": {"path": "client-server/tech/create"},
+    "create_new_age": {"path": "client-server/tech/create"},
+    "create_jetpack": {"path": "client-server/tech/create"},
+    "createoreexcavation": {"path": "client-server/tech/create"},
+    "create_enchantment_industry": {"path": "client-server/tech/create"},
+    "createbigcannons": {"path": "client-server/tech/create"},
+    "create_bic_bit": {"path": "client-server/tech/create"},
+    "create_mechanical_extruder": {"path": "client-server/tech/create"},
+    "create_numismatics": {"path": "client-server/tech/create"},
+    "create_mobile_packages": {"path": "client-server/tech/create"},
+    "create_railways_navigator": {"path": "client-server/tech/create"},
+    "create_misc_and_things": {"path": "client-server/tech/create"},
+    "createaddition": {"path": "client-server/tech/create"},
+    "create_connected": {"path": "client-server/tech/create"},
+    "createaddition": {"path": "client-server/tech/create"},
+
+    "botania": {"path": "client-server/magic"},
+    "bloodmagic": {"path": "client-server/magic"},
+    "occultism": {"path": "client-server/magic"},
+    "malum": {"path": "client-server/magic"},
+    "eidolon": {"path": "client-server/magic"},
+    "irons_spellbooks": {"path": "client-server/magic"},
+    "apotheosis": {"path": "client-server/rpg"},
+    "apothic_attributes": {"path": "client-server/lib"},
+    "enchantinginfuser": {"path": "client-server/rpg"},
+    "relics": {"path": "client-server/rpg"},
+    "simplyswords": {"path": "client-server/rpg"},
+    "epicfight": {"path": "client-server/rpg"},
+    "playeranimator": {"path": "client-server/lib"},
+    "levelz": {"path": "client-server/rpg"},
+    "puffish_skills": {"path": "client-server/rpg"},
+    "puffish_attributes": {"path": "client-server/lib"},
+    "paraglider": {"path": "client-server/rpg"},
+    "dungeons_and_combat": {"path": "client-server/rpg"},
+    "bosses_of_mass_destruction": {"path": "client-server/rpg"},
+    "cataclysm": {"path": "client-server/rpg"},
+    "born_in_chaos_v1": {"path": "client-server/mobs"},
+    "friendsandfoes": {"path": "client-server/mobs"},
+    "naturalist": {"path": "client-server/mobs"},
+    "untamedwilds": {"path": "client-server/mobs"},
+    "crittersandcompanions": {"path": "client-server/mobs"},
+    "deeperdarker": {"path": "client-server/worldgen"},
+    "undergarden": {"path": "client-server/worldgen"},
+    "blue_skies": {"path": "client-server/worldgen"},
+    "twilightforest": {"path": "client-server/worldgen"},
+    "regions_unexplored": {"path": "client-server/worldgen"},
+    "terralith": {"path": "client-server/worldgen"},
+    "incendium": {"path": "client-server/worldgen"},
+    "nullscape": {"path": "client-server/worldgen"},
+    "geophilic": {"path": "client-server/worldgen"},
+    "betterarcheology": {"path": "client-server/worldgen"},
+    "explorify": {"path": "client-server/worldgen"},
+    "idas": {"path": "client-server/worldgen"},
+    "compat_structure": {"path": "client-server/worldgen"},
+    "world_of_wonders": {"path": "client-server/worldgen"},
+    "regions_unexplored": {"path": "client-server/worldgen"},
+    "another_furniture": {"path": "client-server/decoration"},
+    "chipped": {"path": "client-server/decoration"},
+    "framedblocks": {"path": "client-server/decoration"},
+    "twigs": {"path": "client-server/decoration"},
+    "furniture": {"path": "client-server/decoration"},
+    "buildersdelight": {"path": "client-server/decoration"},
+    "decorative_blocks": {"path": "client-server/decoration"},
+    "macawsbridges": {"path": "client-server/decoration"},
+    "macawsdoors": {"path": "client-server/decoration"},
+    "macawsfences": {"path": "client-server/decoration"},
+    "macawslights": {"path": "client-server/decoration"},
+    "macawspaintings": {"path": "client-server/decoration"},
+    "macawsroofs": {"path": "client-server/decoration"},
+    "macawswindows": {"path": "client-server/decoration"},
+    "macawsfurniture": {"path": "client-server/decoration"},
+    "framedblocks": {"path": "client-server/decoration"},
+    "rechiseled": {"path": "client-server/decoration"},
+    "supplementaries": {"path": "client-server/decoration"},
+    "amendments": {"path": "client-server/decoration"},
+    "everycomp": {"path": "client-server/decoration"},
+
+    "alternate_current": {"path": "server/performance"},
+    "servercore": {"path": "server/performance"},
+    "chunky": {"path": "server/utility"},
+    "chunkpregen": {"path": "server/utility"},
+    "smoothboot": {"path": "client-server/performance"},
+    "badoptimizations": {"path": "client/performance"},
+    "dynamic_fps": {"path": "client/performance"},
+    "moreculling": {"path": "client/performance"},
+    "entity_texture_features": {"path": "client/visual"},
+    "entity_model_features": {"path": "client/visual"},
+    "immediatelyfast": {"path": "client/performance"},
+    "particle_core": {"path": "client/performance"},
+    "modernfix": {"path": "client-server/performance"},
+    "connectivity": {"path": "client-server/performance"},
+    "packetfixer": {"path": "client-server/performance"},
+    "spark": {"path": "server/utility"},
+    "observable": {"path": "client-server/utility"},
+    "debugify": {"path": "client-server/utility"},
+    "debugutils": {"path": "client/utility"},
+    "inventoryhud": {"path": "client/ui"},
+    "controlling": {"path": "client/ui"},
+    "catalogue": {"path": "client/ui"},
+    "modnametooltip": {"path": "client/ui"},
+    "shulkerboxtooltip": {"path": "client/ui"},
+    "tooltipfix": {"path": "client/ui"},
+    "legendarytooltips": {"path": "client/ui"},
+    "chat_heads": {"path": "client/ui"},
+    "betterpingdisplay": {"path": "client/ui"},
+    "betterf3": {"path": "client/ui"},
+    "zoomify": {"path": "client/utility"},
+    "okzoomer": {"path": "client/utility"},
+    "replaymod": {"path": "client/utility"},
+    "freecam": {"path": "client/utility"},
+    "shadersmod": {"path": "client/visual"},
+    "visuality": {"path": "client/visual"},
+    "effective": {"path": "client/visual"},
+    "fallingleaves": {"path": "client/visual"},
+    "presencefootsteps": {"path": "client/visual"},
+    "sound_physics_remastered": {"path": "client/visual"},
+    "not_enough_effects": {"path": "client/visual"},
+    "betterthirdperson": {"path": "client/visual"},
+    "firstperson": {"path": "client/visual"},
+    "blur": {"path": "client/visual"},
+    "borderless": {"path": "client/utility"},
+    "dynamiccrosshair": {"path": "client/ui"},
+    "raised": {"path": "client/visual"},
+    "visualworkbench": {"path": "client-server/utility"},
+    "craftingtweaks": {"path": "client-server/utility"},
+    "mousewheelie": {"path": "client/utility"},
+    "itemphysic": {"path": "client/visual"},
+    "durabilitytooltip": {"path": "client/ui"},
+    "minihud": {"path": "client/ui"},
+    "xaeroplus": {"path": "client/ui"},
+    "betterstats": {"path": "client/ui"}
   }
 }
