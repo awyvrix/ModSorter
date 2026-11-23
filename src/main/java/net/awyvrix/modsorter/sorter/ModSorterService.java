@@ -50,13 +50,21 @@ public final class ModSorterService implements ITransformationService {
 
                 LOGGER.info("Defragmentation successfully finished");
             } catch (IOException e) {
+                LOGGER.error("Failed to complete defragmentation process");
                 throw new RuntimeException(e);
             }
         } else {
             LOGGER.info("Initialising ModSorter");
-            ModSorter.sort();
+            try {
+                if (commonConfig.resort) defragment(CONFIG.rewriteOnConflict);
+                ModSorter.sort();
+            } catch (IOException e) {
+                LOGGER.error("Failed to complete sorting process");
+                throw new RuntimeException(e);
+            }
             LOGGER.info("ModSorter initialized");
         }
+        if (commonConfig.exitOnComplete) System.exit(1);
     }
 
     @Override
