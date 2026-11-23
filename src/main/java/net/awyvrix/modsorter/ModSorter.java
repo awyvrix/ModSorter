@@ -1,32 +1,23 @@
 package net.awyvrix.modsorter;
 
 import net.neoforged.fml.loading.FMLPaths;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.DirectoryStream;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.util.*;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import java.util.jar.JarInputStream;
-import java.util.regex.Matcher;
+import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static net.awyvrix.modsorter.ModParser.findDestination;
-import static net.awyvrix.modsorter.ModParser.readModId;
 import static net.awyvrix.modsorter.Util.deleteDirectory;
 import static net.awyvrix.modsorter.Util.removeEmptyDirectories;
 import static net.awyvrix.modsorter.sorter.ModSorterRules.CONFIG;
-import static net.awyvrix.modsorter.sorter.ModSorterRules.RULES;
 
 public final class ModSorter {
-    public static final Logger LOGGER = LoggerFactory.getLogger(ModSorter.class);
     public static final Pattern MOD_ID = Pattern.compile("^modId\\s*=\\s*\"([^\"]+)\"");
     public static final Pattern MODS_SECTION = Pattern.compile("^\\[\\[mods]]\\s*(?:#.*)?$");
     public static final String JARJAR_PATH = "META-INF/jarjar/";
@@ -47,7 +38,7 @@ public final class ModSorter {
         Path modsDir = FMLPaths.MODSDIR.get().toAbsolutePath().normalize();
 
         if (!Files.isDirectory(modsDir)) {
-            LOGGER.warn("Mods directory does not exist: {}", modsDir);
+            Main.LOGGER.warn("Mods directory does not exist: {}", modsDir);
             return;
         }
 
@@ -62,14 +53,14 @@ public final class ModSorter {
                     .toList();
 
         } catch (IOException e) {
-            LOGGER.error("Failed to scan mods directory", e);
+            Main.LOGGER.error("Failed to scan mods directory", e);
             return;
         }
 
         for (Path jar : jars) {
             try {
                 Path destination = findDestination(jar, modsDir);
-
+                
                 if (destination == null || destination.equals(jar)) {
                     skipped++;
                     continue;
@@ -78,22 +69,22 @@ public final class ModSorter {
                 Files.createDirectories(destination.getParent());
                 Files.move(jar, destination);
 
-                LOGGER.info("Moved {} -> {}", jar.getFileName(), modsDir.relativize(destination));
+                Main.LOGGER.info("Moved {} -> {}", jar.getFileName(), modsDir.relativize(destination));
                 moved++;
             } catch (Exception e) {
-                LOGGER.warn("Failed to sort {}: {}", jar.getFileName(), e.toString());
+                Main.LOGGER.warn("Failed to sort {}: {}", jar.getFileName(), e.toString());
                 failed++;
             }
         }
 
-        LOGGER.info("Sorting completed: {} moved, {} skipped, {} failed", moved, skipped, failed);
+        Main.LOGGER.info("Sorting completed: {} moved, {} skipped, {} failed", moved, skipped, failed);
         try {
             if (CONFIG.deleteEmptyFolders) removeEmptyDirectories(modsDir);
             if (CONFIG.deleteServerMods) deleteDirectory(modsDir.resolve("server"));
             if (CONFIG.deleteClientMods) deleteDirectory(modsDir.resolve("client"));
             if (CONFIG.deleteClientAndServerMods) deleteDirectory(modsDir.resolve("client-server"));
         } catch (IOException e) {
-            LOGGER.warn("Failed to polish mods folder", e);
+            Main.LOGGER.warn("Failed to polish mods folder", e);
         }
     }
 
@@ -135,36 +126,13 @@ public final class ModSorter {
                 moved++;
             } catch (IOException e) {
                 skipped++;
-                LOGGER.error("Failed to defragment {}: {}", source, e.getMessage());
+                Main.LOGGER.error("Failed to defragment {}: {}", source, e.getMessage());
             }
         }
 
         if (CONFIG.deleteEmptyFolders) removeEmptyDirectories(modsDir);
-        LOGGER.info("Defragmentation completed: {} moved, {} skipped", moved, skipped);
+        Main.LOGGER.info("Defragmentation completed: {} moved, {} skipped", moved, skipped);
     }
-
-    public static boolean replaceMods(Path source, Path destination, Path installed) throws IOException {
-        Path backupDir = FMLPaths.CONFIGDIR.get().resolve("modsorter/backup");
-        Files.createDirectories(backupDir);
-        Path backup = null;
-
-        try {
-            Path bkp = backupDir.resolve(UUID.randomUUID() + "-" + installed.getFileName());
-            Files.move(installed, bkp);
-            backup = bkp;
-
-            Files.createDirectories(destination.getParent());
-            Files.move(source, destination);
-
-            Files.deleteIfExists(backup);
-            LOGGER.info("Replaced {} -> {}", installed.getFileName(), destination.getFileName());
-            return true;
-        } catch (IOException e) {
-            if (backup != null && Files.exists(backup)) {
-                Files.createDirectories(installed.getParent());
-                Files.move(backup, installed, StandardCopyOption.REPLACE_EXISTING);
-            }
-            throw e;
-        }
-    }
+    
+    
 }
