@@ -3,6 +3,7 @@ package net.awyvrix.modsorter.config;
 public class Config {
     public boolean useOverrides = true;
     public boolean alwaysOverride = true;
+    public boolean resort = true;
 
     public boolean deleteEmptyFolders = true;
     public boolean deleteClientMods = false;
@@ -15,4 +16,6 @@ public class Config {
     public boolean autoUpdateDatabase = true;
     public String database = "https://raw.githubusercontent.com/awyvrix/ModSorter/main/src/main/resources/data.json";
     public int timeout = 15;
+
+    public boolean exitOnComplete = false;
 }
