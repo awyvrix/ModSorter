@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "databaseVersion": 3,
+  "databaseVersion": 4,
   "mods": {
     "prickle": {"path": "client-server/lib"},
     "reforged": {"path": "client-server/rpg"},
@@ -73,7 +73,8 @@
     "hearthandharvest": {"path": "client-server/food"},
     "iceandfire": {"path": "client-server/rpg"},
     "iris": {"path": "client/visual"},
-    "jei": {"path": "client/ui"},
+    "jei": {"path": "client-server/ui"},
+    "jeioptimizer": {"path": "client-server/ui"},
     "jupiter": {"path": "client-server/lib"},
     "kotlinforforge": {"path": "client-server/lib"},
     "lambdynlights": {"path": "client/visual"},
