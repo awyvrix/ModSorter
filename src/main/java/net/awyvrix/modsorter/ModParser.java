@@ -19,7 +19,6 @@ import java.util.jar.JarInputStream;
 import java.util.regex.Matcher;
 import java.util.stream.Stream;
 
-import static com.mojang.text2speech.Narrator.LOGGER;
 import static net.awyvrix.modsorter.ModSorter.*;
 import static net.awyvrix.modsorter.sorter.ModSorterRules.CONFIG;
 import static net.awyvrix.modsorter.sorter.ModSorterRules.RULES;
@@ -163,7 +162,7 @@ public final class ModParser {
             Files.move(source, destination);
 
             Files.deleteIfExists(backup);
-            LOGGER.info("Replaced {} -> {}", installed.getFileName(), destination.getFileName());
+            Main.LOGGER.info("Replaced {} -> {}", installed.getFileName(), destination.getFileName());
             return true;
         } catch (IOException e) {
             if (backup != null && Files.exists(backup)) {
